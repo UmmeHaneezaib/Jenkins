@@ -7,8 +7,5 @@ public class HelloWorld {
     public String say(String message) {
        return  "Hello World";
     }
-    public String bye(String message) {
-       return  "Bye World";
-    }
-    
+   
 }
