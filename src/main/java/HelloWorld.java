@@ -10,9 +10,7 @@ public class HelloWorld {
     public String bye(String message) {
        return  "Bye World";
     }
-     public String hi(String message) {
-       return  "Hi World";
-    }
+     
    
    
 }
