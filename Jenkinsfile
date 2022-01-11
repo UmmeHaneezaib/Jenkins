@@ -8,9 +8,10 @@ pipeline {
 
         stage('Build Maven') {
             steps{
-                 git branch: 'main', credentialsId: 'devopshint', url: 'https://github.com/devopshint/jenkins-nexus'
+                 git branch: 'main', credentialsId: 'UmmeHaneezaib', url: 'https://github.com/UmmeHaneezaib/Jenkins.git'
                  sh "mvn -Dmaven.test.failure.ignore=true clean package"
                 
             }
         }  
     }
+}
