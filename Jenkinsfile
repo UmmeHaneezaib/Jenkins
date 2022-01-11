@@ -38,7 +38,7 @@ pipeline {
                             
                             protocol: 'http',
 
-                            nexusUrl: '52.66.46.76:8081/',
+                            nexusUrl: '10.0.2.15:8081/',
 
                             groupId: 'pom.com.mycompany.app',
 
@@ -46,7 +46,7 @@ pipeline {
 
                             repository: 'repository/maven-central-repository',
 
-                            credentialsId: 'NEXUS_CRED',
+                            credentialsId: 'nexus_cred',
 
                             artifacts: [
 
