@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools {
-        maven 'MAVEN'
+        maven 'Maven'
     }
 
     stages {
@@ -40,7 +40,7 @@ pipeline {
 
                             nexusUrl: '10.0.2.15:8081/',
 
-                            groupId: 'pom.com.mycompany.app',
+                            groupId: 'pom.com.thbs',
 
                             version: 'pom.1.0-SNAPSHOT',
 
@@ -50,7 +50,7 @@ pipeline {
 
                             artifacts: [
 
-                                [artifactId: 'pom.my-app',
+                                [artifactId: 'pom.contact-list',
 
                                 classifier: '',
 
@@ -58,7 +58,7 @@ pipeline {
 
                                 type: pom.packaging],
 
-                                [artifactId: 'pom.my-app',
+                                [artifactId: 'pom.contact-list',
 
                                 classifier: '',
 
