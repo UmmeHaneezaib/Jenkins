@@ -1,19 +1,15 @@
 pipeline {
     agent any
+    tools {
+        maven 'MAVEN'
+    }
 
-     stages {
-        stage('Initialize') {
-             steps {
-                echo "Hello World"
-                echo "${BUILD_NUMBER}"
-             }
-        }
+    stages {
 
-        stage('Run Test ') {
-              steps {
-                echo "Hello World"
-                echo "${JOB_NAME}"
-              }
-        }
-     }
-}
+        stage('Build Maven') {
+            steps{
+                 git branch: 'main', credentialsId: 'devopshint', url: 'https://github.com/devopshint/jenkins-nexus'
+                 sh "mvn -Dmaven.test.failure.ignore=true clean package"
+                
+            }
+        }  
